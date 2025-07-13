@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Block AI Overviews",
-    "version": "1.01",
+    "version": "1.0.1",
     "description": "Block and invalid AI Overviews.",
     "permissions": [
         "declarativeNetRequest",
