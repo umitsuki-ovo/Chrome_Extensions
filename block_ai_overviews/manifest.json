@@ -1,0 +1,33 @@
+{
+    "manifest_version": 3,
+    "name": "Block AI Overviews",
+    "version": "1.01",
+    "description": "Block and invalid AI Overviews.",
+    "permissions": [
+        "declarativeNetRequest",
+        "declarativeNetRequestWithHostAccess",
+        "storage"
+    ],
+    "host_permissions": ["https://www.google.com/search*"],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.google.com/search*"
+            ],
+            "js": ["content.js"],
+            "run_at": "document_idle"
+        }
+    ],
+    "declarative_net_request": {
+        "rule_resources": [
+            {
+                "id": "default_rules",
+                "enabled": true,
+                "path": "rules.json"
+            }
+        ]
+    }
+}
