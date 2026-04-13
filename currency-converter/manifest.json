@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Smart Currency Converter",
+    "version": "1.0",
+    "description": "ページ内の通貨を自動変換",
+    "permissions": ["storage"],
+    "host_permissions": [
+        "https://api.exchangerate-api.com/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"]
+        }
+    ]
+}
