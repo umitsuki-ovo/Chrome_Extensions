@@ -16,6 +16,14 @@
     "content_scripts": [
         {
             "matches": ["<all_urls>"],
+            "exclude_matches": [
+                "https://www.google.com/search*",
+                "https://www.google.co.jp/search*",
+                "https://www.bing.com/search*",
+                "https://search.yahoo.com/*",
+                "https://www.yahoo.co.jp/*",
+                "https://duckduckgo.com/*"
+            ],
             "js": ["content.js"]
         }
     ]
