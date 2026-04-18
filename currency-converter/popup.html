@@ -5,15 +5,35 @@
     <style>
     body {
         font-family: sans-serif;
-        padding: 10px;
-        width: 200px;
+        padding: 12px;
+        width: 220px;
     }
     h3 {
-        margin-top: 0;
+        margin: 0 0 10px;
+        font-size: 14px;
     }
-    select, label {
+    label {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-bottom: 10px;
+        font-size: 13px;
+    }
+    .field {
+        margin-top: 6px;
+    }
+    .field span {
+        font-size: 11px;
+        color: #666;
         display: block;
-        margin-top: 10px;
+        margin-bottom: 4px;
+    }
+    select {
+        width: 100%;
+        font-size: 13px;
+        padding: 4px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
     }
     </style>
 </head>
@@ -22,14 +42,46 @@
 
     <label>
         <input type="checkbox" id="toggle">
-        有効化
+        有効化 / Enable
     </label>
 
-    <select id="currency">
-        <option value="JPY">JPY</option>
-        <option value="USD">USD</option>
-        <option value="EUR">EUR</option>
-    </select>
+    <div class="field">
+        <span>変換先通貨 / Target Currency</span>
+        <select id="currency">
+            <optgroup label="Asia">
+                <option value="JPY">JPY</option>
+                <option value="CNY">CNY</option>
+                <option value="KRW">KRW</option>
+                <option value="HKD">HKD</option>
+                <option value="SGD">SGD</option>
+                <option value="TWD">TWD</option>
+                <option value="INR">INR</option>
+                <option value="THB">THB</option>
+            </optgroup>
+            <optgroup label="Americas">
+                <option value="USD">USD</option>
+                <option value="CAD">CAD</option>
+                <option value="MXN">MXN</option>
+                <option value="BRL">BRL</option>
+            </optgroup>
+            <optgroup label="Europe">
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+                <option value="CHF">CHF</option>
+                <option value="SEK">SEK</option>
+                <option value="NOK">NOK</option>
+                <option value="RUB">RUB</option>
+                <option value="TRY">TRY</option>
+            </optgroup>
+            <optgroup label="Oceania">
+                <option value="AUD">AUD</option>
+                <option value="NZD">NZD</option>
+            </optgroup>
+            <optgroup label="Africa">
+                <option value="ZAR">ZAR</option>
+            </optgroup>
+        </select>
+    </div>
 
     <script src="popup.js"></script>
 </body>
