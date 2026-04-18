@@ -7,4 +7,4 @@ AIによる概要をブロック
 
 ## Currency Converter
 サイト内の外国通貨を変換
-- last change: 2026/04/13
+- last change: 2026/04/18
